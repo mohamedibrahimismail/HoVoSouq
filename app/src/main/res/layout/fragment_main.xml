@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/wight_meduim"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/parent_activity_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <com.hazem.hovosouq.view.CircleIndicator2
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="bottom" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/imagesRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:focusableInTouchMode="true"
+                        android:scrollbars="vertical" />
+
+                    <!--<com.hazem.hovosouq.view.CircleIndicator2-->
+                        <!--android:id="@+id/indicator"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="48dp"-->
+                        <!--android:layout_gravity="bottom" />-->
+
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="left"
+                    android:text="Top Deals"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/offersRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusableInTouchMode="true"
+                    android:scrollbars="vertical" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="left"
+                        android:text="Category"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/seeall"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="right"
+                        android:drawablePadding="5dp"
+                        android:text="See All"
+                        android:drawableRight="@drawable/view_dashboard"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/categoryRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusableInTouchMode="true"
+                    android:scrollbars="horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="?android:colorAccent"
+        android:indeterminateTintMode="src_in" />
+
+
+</FrameLayout>

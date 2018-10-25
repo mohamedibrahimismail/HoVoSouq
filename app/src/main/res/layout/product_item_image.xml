@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@color/wight"
+    android:layoutDirection="ltr"
+    >
+
+
+    <ImageView
+        android:id="@+id/activityImage"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shoes"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"/>
+
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/circle"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add_shopping_cart_black_24dp" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/frameLayout"
+        android:layout_alignEnd="@+id/frameLayout"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:padding="7dp"
+        android:src="@drawable/ic_favorite_border_black_24dp" />
+
+</RelativeLayout>

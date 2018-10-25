@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Selected_Category"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:elevation="4dp"
+                    android:background="@color/colorPrimaryDark"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:id="@+id/back_arrow"
+                            android:src="@drawable/ic_back"
+                            android:layout_alignParentLeft="true"
+                            />
+
+
+
+                        <TextView
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_toRightOf="@+id/back_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Subcategory"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:layout_toEndOf="@+id/back_arrow"
+                            android:layout_alignBaseline="@+id/back_arrow"
+                            />
+
+                    </RelativeLayout>
+
+
+
+
+                </FrameLayout>
+
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/all_categories_recyclerview"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
